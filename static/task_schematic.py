@@ -12,10 +12,6 @@ def calculate_positions(center, radius, num_circles, start_angle):
         positions.append((x, y))
     return positions
 
-import numpy as np
-import matplotlib.pyplot as plt
-from matplotlib.patches import Circle
-
 def draw_rounded_rectangle_chain(ax, center, puzzle_width, num_circles, 
                                  highlight_indices, circle_radius, 
                                  fontsize_numbers, highlight_color):
