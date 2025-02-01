@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from matplotlib.patches import Circle, Ellipse
+from matplotlib.patches import Circle
 
 def calculate_positions(center, radius, num_circles, start_angle):
     """Calculate positions of circles in a ring formation"""
@@ -54,47 +54,6 @@ def draw_rounded_rectangle_chain(ax, center, puzzle_width, num_circles,
     coords = coords[:num_circles]
 
     for i, (x, y) in enumerate(coords):
-        color = highlight_color if i in highlight_indices else 'white'
-        circle = Circle((x, y), radius=circle_radius, edgecolor='black', facecolor=color)
-        ax.add_patch(circle)
-        ax.text(x, y, str(i + 1), ha='center', va='center', fontsize=fontsize_numbers)
-# def draw_rounded_rectangle_chain(ax, center, puzzle_width, num_circles, 
-#                                  highlight_indices, circle_radius, 
-#                                  fontsize_numbers, highlight_color):
-#     cx, cy = center
-#     base_width = puzzle_width / 3
-#     h = puzzle_width / 4
-#     r = puzzle_width / 15
-
-#     w = base_width + (num_circles - 8) * circle_radius
-
-#     x_left, x_right = cx - w / 2, cx + w / 2
-#     y_top, y_bottom = cy + h / 2, cy - h / 2
-
-#     top_extra = (num_circles - 8) // 2
-#     bottom_extra = num_circles - 8 - top_extra
-
-#     coords = []
-
-#     coords.append((x_right - r, y_top))
-#     coords.extend([(x_right, y) for y in np.linspace(y_top - r, y_bottom + r, 2)])
-#     coords.append((x_right - r, y_bottom))
-
-#     if bottom_extra > 0:
-#         spacing_bottom = (x_right - r - (x_left + r)) / (bottom_extra + 1)
-#         coords.extend([(x_left + r + i * spacing_bottom, y_bottom) for i in range(1, bottom_extra + 1)])
-
-#     coords.append((x_left + r, y_bottom))
-#     coords.extend([(x_left, y) for y in np.linspace(y_bottom + r, y_top - r, 2)])
-#     coords.append((x_left + r, y_top))
-
-#     if top_extra > 0:
-#         spacing_top = (x_right - r - (x_left + r)) / (top_extra + 1)
-#         coords.extend([(x_left + r + i * spacing_top, y_top) for i in range(1, top_extra + 1)])
-
-#     coords = coords[:num_circles]
-
-#     for i, (x, y) in enumerate(coords):
         color = highlight_color if i in highlight_indices else 'white'
         circle = Circle((x, y), radius=circle_radius, edgecolor='black', facecolor=color)
         ax.add_patch(circle)
