@@ -1,0 +1,22 @@
+[project]
+name = "puzzle-visualizer"
+version = "0.1.0"
+description = "Visualization tools for permutation puzzles"
+authors = [
+    {name = "T0chka",email = "an.dolgorukova@gmail.com"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy (>=2.2.2,<3.0.0)",
+    "opencv-python (>=4.11.0.86,<5.0.0.0)",
+    "matplotlib (>=3.10.0,<4.0.0)",
+    "ipykernel (>=6.29.5,<7.0.0)",
+    "notebook (>=7.3.2,<8.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
