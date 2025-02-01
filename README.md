@@ -36,7 +36,7 @@ The project provides two main visualization modes:
 1. Static Schematic View:
 
 ```bash
-python static/task_picture.py
+python static/task_schematic.py
 ```
 
 2. Interactive Animation View:
