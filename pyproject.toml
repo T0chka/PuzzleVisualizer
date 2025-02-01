@@ -1,5 +1,5 @@
 [project]
-name = "puzzle-visualizer"
+name = "PuzzleVisualizer"
 version = "0.1.0"
 description = "Visualization tools for permutation puzzles"
 authors = [
@@ -16,6 +16,8 @@ dependencies = [
     "notebook (>=7.3.2,<8.0.0)"
 ]
 
+[tool.poetry]
+package-mode = false
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
